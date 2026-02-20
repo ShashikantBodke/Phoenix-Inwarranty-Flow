@@ -5265,7 +5265,7 @@
           "script": {
             "exec": [
               "console.log(\"Postive Test Cases, User details API request for supervise\")\r",
-              "const responseBody=pm.response.json()\r",
+              "var responseBody=pm.response.json()\r",
               "\r",
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200)\r",
@@ -5601,7 +5601,7 @@
           "script": {
             "exec": [
               "console.log(\"Positive Test Case - Pending for Assignment API Call\")\r",
-              "const responseBody= pm.response.json()\r",
+              "var responseBody= pm.response.json()\r",
               "const newjobID=pm.collectionVariables.get(\"jobId\")\r",
               "\r",
               "pm.test(\"Status code is 200\",function(){\r",
@@ -6230,7 +6230,7 @@
           "script": {
             "exec": [
               "console.log(\"Verify the job assigned to engineer is not available for pending for assignment bucket\")\r",
-              "const responseBody=pm.response.json()\r",
+              "var responseBody=pm.response.json()\r",
               "const jobID=pm.collectionVariables.get(\"jobId\")\r",
               "const actualJobId = responseBody.data.map(function(jsonObject){\r",
               "        return jsonObject.id    \r",
@@ -7460,7 +7460,7 @@
           "script": {
             "exec": [
               "console.log(\"Verify My Jobs api\")\r",
-              "const responseBody=pm.response.json()\r",
+              "var responseBody=pm.response.json()\r",
               "\r",
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
@@ -7554,7 +7554,7 @@
           "script": {
             "exec": [
               "console.log(\"Verify My Jobs api-no auth\")\r",
-              "const responseBody=pm.response.json()\r",
+              "var responseBody=pm.response.json()\r",
               "\r",
               "pm.test(\"Status code is 401\", function () {\r",
               "    pm.response.to.have.status(401)\r",
@@ -7598,7 +7598,7 @@
           "script": {
             "exec": [
               "console.log(\"Verify My Jobs api-invalid auth\")\r",
-              "const responseBody=pm.response.json()\r",
+              "var responseBody=pm.response.json()\r",
               "\r",
               "pm.test(\"Status code is 403\", function () {\r",
               "    pm.response.to.have.status(403)\r",
@@ -8305,7 +8305,7 @@
           "script": {
             "exec": [
               "console.log(\"Verify My Jobs api\")\r",
-              "const responseBody=pm.response.json()\r",
+              "var responseBody=pm.response.json()\r",
               "\r",
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
@@ -8779,7 +8779,7 @@
           "script": {
             "exec": [
               "console.log(\"Verify the UserDetails ForQC-Positive test\")\r",
-              "const responseBody = pm.response.json();\r",
+              "var responseBody = pm.response.json();\r",
               "\r",
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
@@ -8900,7 +8900,7 @@
           "script": {
             "exec": [
               "console.log(\"Verify the UserDetails ForQC-Negative test\")\r",
-              "const responseBody = pm.response.json();\r",
+              "var responseBody = pm.response.json();\r",
               "\r",
               "pm.test(\"Status code is 403\", function () {\r",
               "    pm.response.to.have.status(403);\r",
@@ -8942,7 +8942,7 @@
           "script": {
             "exec": [
               "console.log(\"CountAPIRequestForQC - Positive Test\")\r",
-              "const responseBody = pm.response.json();\r",
+              "var responseBody = pm.response.json();\r",
               "\r",
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
@@ -9058,7 +9058,7 @@
           "script": {
             "exec": [
               "console.log(\"CountAPIRequestForQC - Negative Test\")\r",
-              "const responseBody = pm.response.json();\r",
+              "var responseBody = pm.response.json();\r",
               "\r",
               "pm.test(\"Status code is 403\", function () {\r",
               "    pm.response.to.have.status(403);\r",
@@ -9269,7 +9269,7 @@
           "script": {
             "exec": [
               "console.log(\"QCCompletedAPIRequest-positive test\")\r",
-              "const responseBody = pm.response.json();\r",
+              "var responseBody = pm.response.json();\r",
               "\r",
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
@@ -10649,7 +10649,7 @@
               "    pm.expect(pm.response.json().message).to.eql(\"Success\");\r",
               "})\r",
               "\r",
-              "const responseBody = pm.response.json();\r",
+              "var responseBody = pm.response.json();\r",
               "const jobId = pm.collectionVariables.get(\"jobId\");\r",
               "const imeiNumber = pm.collectionVariables.get(\"imeiNumber\");\r",
               "const firstName = pm.collectionVariables.get(\"firstName\");\r",
