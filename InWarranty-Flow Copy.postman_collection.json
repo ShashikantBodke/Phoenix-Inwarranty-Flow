@@ -8858,7 +8858,7 @@
           "script": {
             "exec": [
               "console.log(\"Verify the UserDetails ForQC-Negative test\")\r",
-              "const responseBody = pm.response.json();\r",
+              "var responseBody = pm.response.json();\r",
               "\r",
               "pm.test(\"Status code is 401\", function () {\r",
               "    pm.response.to.have.status(401);\r",
@@ -9013,7 +9013,7 @@
           "script": {
             "exec": [
               "console.log(\"CountAPIRequestForQC - Negative Test\")\r",
-              "const responseBody = pm.response.json();\r",
+              "var responseBody = pm.response.json();\r",
               "\r",
               "pm.test(\"Status code is 401\", function () {\r",
               "    pm.response.to.have.status(401);\r",
