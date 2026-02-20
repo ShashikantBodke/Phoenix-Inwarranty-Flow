@@ -4411,7 +4411,7 @@
               "\r",
               "pm.test(\"Response body contains 'Unauthorized'\", function () {\r",
               "    pm.expect(pm.response.text()).to.include('Unauthorized');\r",
-              "}"
+              "})\r"
             ],
             "type": "text/javascript",
             "packages": {},
@@ -5442,7 +5442,7 @@
           "script": {
             "exec": [
               "console.log(\"positive test cases- Verifying the count API call with supervisor\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "\r",
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
@@ -10539,7 +10539,7 @@
               "console.log(\"Negative Test cases0 no auth\")\r",
               "pm.test(\"Status code is 401\", function () {\r",
               "    pm.response.to.have.status(401);\r",
-              "});"
+              "})\r;"
             ],
             "type": "text/javascript",
             "packages": {},
@@ -10649,7 +10649,7 @@
               "    pm.expect(pm.response.json().message).to.eql(\"Success\");\r",
               "})\r",
               "\r",
-              "var responseBody = pm.response.json();\r",
+              "const responseBody = pm.response.json();\r",
               "const jobId = pm.collectionVariables.get(\"jobId\");\r",
               "const imeiNumber = pm.collectionVariables.get(\"imeiNumber\");\r",
               "const firstName = pm.collectionVariables.get(\"firstName\");\r",
