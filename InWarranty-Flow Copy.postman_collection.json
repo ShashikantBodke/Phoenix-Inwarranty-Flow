@@ -4834,7 +4834,7 @@
             "exec": [
               "console.log(\"Negative Test cases running for Job Details API for malformed job number-bad request\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "pm.test(\"Status code is 400\", function () {\r",
               "    pm.response.to.have.status(400)\r",
               "})"
@@ -6117,7 +6117,7 @@
           "listen": "test",
           "script": {
             "exec": [
-              "console.log(\"Negative Test Case-Assign Job to Engineer API Call\"- invalid Job ID)\r",
+              "console.log(\"Negative Test Case-Assign Job to Engineer API Call\- invalid Job ID\")\r",
               "\r",
               "pm.test(\"Status code is 400\", function () {\r",
               "    pm.response.to.have.status(400);\r",
@@ -6173,7 +6173,7 @@
           "listen": "test",
           "script": {
             "exec": [
-              "console.log(\"Negative Test Case-Assign Job to Engineer API Call\"- invalid Job ID)\r",
+              "console.log(\"Negative Test Case-Assign Job to Engineer API Call\- invalid Job ID \")\r",
               "\r",
               "pm.test(\"Status code is 400\", function () {\r",
               "    pm.response.to.have.status(400);\r",
