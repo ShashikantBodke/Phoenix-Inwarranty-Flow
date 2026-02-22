@@ -30,7 +30,7 @@ jobs:
               newman run 'Inwarranty-flow Collection.postman_collection.json' \
               -e 'QA.postman_environment.json' \
               -r cli,htmlextra \
-              --reporter-htmlextra-export ./neman/index.html
+              --reporter-htmlextra-export ./newman/index.html
              
               
       - name: Newman Report
