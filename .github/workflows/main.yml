@@ -29,8 +29,9 @@ jobs:
         run: |
               newman run 'InWarranty-Flow Copy.postman_collection.json' \
               -e 'QA Copy.postman_environment.json' \
-              -r cli,htmlextra \
-              --reporter-htmlextra-export ./newman/index.html
+              -r cli,htmlextra 
+             
+              
       - name: Newman Report
         if: always() #
         uses: actions/upload-artifact@v6.0.0
