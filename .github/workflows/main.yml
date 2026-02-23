@@ -9,7 +9,7 @@ on:
     - cron: 00 14 * * * #730 PM IST
 jobs: 
   run-postman-tests:
-    runs-on: ubuntu-latest
+    runs-on: ec2-github-runner
 
 
     steps:
