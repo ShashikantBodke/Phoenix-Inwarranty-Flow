@@ -23,10 +23,35 @@ You can directly view the latest test report of the Postman test at the Github P
 You can run the project on your local system for that:
 1. Clone the project on the local system : https://github.com/ShashikantBodke/Phoenix-Inwarranty-Flow.git
 2. Install Nodejs and NPM from https://nodejs.org/en
-3. Install Newman using : npm install -g neman
-4. Install Newman-Reporter-Htmlextra using : npm install -g newman-reporter-htmlextra
+3. Install Newman using : ```npm install -g neman```
+4. Install Newman-Reporter-Htmlextra using : ```npm install -g newman-reporter-htmlextra```
 5. Run the Newman command :
-              newman run 'Inwarranty-flow Collection.postman_collection.json' \
+```
+    newman run 'Inwarranty-flow Collection.postman_collection.json' \
               -e 'QA.postman_environment.json' \
               -r cli,htmlextra \
               --reporter-htmlextra-export ./newman/index.html
+```
+
+## HTML Report ##
+The report will be created in the newman folder
+![Postman Report](https://github.com/ShashikantBodke/Phoenix-Inwarranty-Flow/blob/static-content/NewmanReport.png)
+
+![Postman Report](https://raw.githubuserconetent.com/ShashikantBodke/Phoenix-Inwarranty-Flow/static-content/NewmanReport.png)
+
+## Testing Coverage ##
+1. Happy Flow Testing
+2. Negative Testing and Edge Case Testing
+3. Token Testing
+4. Data Driven Testing with CSV
+5. Schema Validation
+6. Secrets Management with Github Secrets
+
+## Project Structure ##
+```
+Phoenix Inwarranty Flow Collection
+  ├─ Inwarranty-flow Collection.postman_collection.json
+  ├─ QA.postman_environment.json
+  └─ testData.csv
+
+```
